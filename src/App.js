@@ -1,6 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import {Router, Route, browserHistory, IndexRoute} from 'react-router';
+import { StickyContainer} from 'react-sticky';
+
+//css
 import 'bootstrap/dist/css/bootstrap.css';
 import './App.css';
 import './category.css';
@@ -18,7 +21,7 @@ import Signup from './Signup'
 import data from './data'
 import ModalElement from './components/homepage/modal'
 
-const App = React.createClass({
+var App = React.createClass({
 
   getInitialState(){
     return {
@@ -34,7 +37,7 @@ const App = React.createClass({
       bottomFeatureI: 0,
       cart: [], 
       isCart: false,
-      username: "", 
+      username: "signup", 
       addToCart: this.addToCart,
     }
   },
@@ -42,7 +45,7 @@ const App = React.createClass({
   componentDidMount(){
 
     //create a list of all data items
-    let listOfItems = []
+    var listOfItems = []
     Object.keys(data).map(function(category){
       return data[category].map(function(item){
           listOfItems.push(item)
@@ -55,7 +58,7 @@ const App = React.createClass({
 
     //check to see if the function call is from the search bar or cart click
     let isCart = event !== undefined ? true : false
-      this.setState({modalIsOpen: true, isCart: isCart});
+    this.setState({modalIsOpen: true, isCart: isCart});
   },
   closeModal() {
     this.setState({modalIsOpen: false, isCart: false});
@@ -63,23 +66,17 @@ const App = React.createClass({
 
   },
   scrollRight(){
-    if(this.state.bottomFeatureI === this.state.data.tech.length-4){
-      this.setState({bottomFeatureI: 0})
-    } else {
-      this.setState({bottomFeatureI: this.state.bottomFeatureI + 1})
-    }
+    let startIndex = this.state.bottomFeatureI === this.state.data.tech.length-4 ? 0 : this.state.bottomFeatureI + 1
+      this.setState({bottomFeatureI: startIndex})
   },
   scrollLeft(){
-    if(this.state.bottomFeatureI === 0){
-      this.setState({bottomFeatureI: this.state.data.tech.length-4})
-    } else {
-      this.setState({bottomFeatureI: this.state.bottomFeatureI - 1})
-    }
+    let startIndex = this.state.bottomFeatureI === 0 ? this.state.data.tech.length-4 : this.state.bottomFeatureI - 1
+      this.setState({bottomFeatureI: startIndex})
   },
 
   handleItemSearch(item){
 
-    let searchItemsObjs = this.state.filteredList.filter(function(filteredListItem){
+    var searchItemsObjs = this.state.filteredList.filter(function(filteredListItem){
       if(filteredListItem.name.toLowerCase().indexOf(item) !== -1){
         return filteredListItem
       }
@@ -91,7 +88,6 @@ const App = React.createClass({
     this.setState({filteredList: this.state.listOfItems})
   },
   addToCart(item){
-    console.log("cart enter", item)
     this.setState({cart: this.state.cart.concat(item)})
   },
   signup(name){
@@ -100,12 +96,13 @@ const App = React.createClass({
   render() {
     //loop over all the children routes and pass them propTypes
     let that = this
-    let children = React.Children.map(this.props.children, function(child) {
+    var children = React.Children.map(this.props.children, function(child) {
         return React.cloneElement(child, Object.assign({}, that.state));
     });
     console.log(this.state.isCart)
     return (
       <div>
+        <StickyContainer>
         <Nav data={this.state.data} onChange={this.handleItemSearch} onReset={this.handleSearchReset} openModal={this.openModal} closeModal={this.closeModal} cart={this.state.cart} username={this.state.username} cartLookUp={this.cartLookUp}/>
         {children}
         <ModalElement 
@@ -115,6 +112,7 @@ const App = React.createClass({
           closeModal={this.closeModal}
           isCart={this.state.isCart}
           cart={this.state.cart}/>
+        </StickyContainer>
         <Footer />
       </div>
     )

@@ -22,6 +22,7 @@ const Signup = React.createClass({
         </div>
       )
     })
+    console.log(this.props.route.name)
     return (
       <div className="sign">
         <div className="signupImage">

@@ -6,8 +6,12 @@ var ProductPage = React.createClass({
     //find the image to display base off the params
     let category = this.props.params.category;
     let product = this.props.params.product;
+    console.log(category, product)
     let item = this.props.data[category].filter(function(item){
+      console.log(item.name)
+      console.log(product)
         if(item.name === product){
+          console.log("remter")
           return item;
         }
       })
@@ -27,7 +31,8 @@ var ProductPage = React.createClass({
       )
     })
     let item = this.findItem()
-
+    console.log(item)
+    console.log(item[0].image[0])
    	return (
       <div className="contentContainer">
 
@@ -39,18 +44,24 @@ var ProductPage = React.createClass({
             <div className="itemTitle">{item[0].name}</div>
             <div className="itemPrice">{"$" + item[0].price}</div>
          </div>
-
+         <br/>
           <div className="itemDescription detailRow">
+        
             <p className="itemDetail ">{item[0].description}</p>
           </div>
+
+          <div className="rating">
+              <span>☆</span><span>☆</span><span>☆</span><span>☆</span><span>☆</span>
+            </div>
 
           <div className="icon detailRow">
             {socialIcon}
           </div>
-          
+        
             <div className="features detailRow">
             <button type="button"className=" btn btn-default">{"Qty:" + item[0].quantity}</button>
-            <button onClick={this.addItemToCart} type="button"className="btn btn-default">Add To Bag</button>
+            <button onClick={this.addItemToCart} type="button"className="btn btn-default" id="targbut">Add To Bag</button>
+
           </div>
         </div>
 

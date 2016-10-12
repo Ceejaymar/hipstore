@@ -211,7 +211,7 @@ a.presented {
 
 .footerCont {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-around; 
 }
 /*--------- /Footer ----------*/
 
@@ -298,8 +298,8 @@ a.presented {
 .scrollButtons {
   font-size: 3.5em;
   background-color: transparent;
-  border: none;
-  color: #786048; 
+   color: #786048; 
+   border: none;
 }
 
 button:focus {
@@ -319,5 +319,11 @@ button:focus {
 
 /*----------/Bottom feature-----------*/
 
+.input-group {
+  margin-bottom: -180px;
+}
 
-
+.wrapper {
+  margin-top: 100px;
+  background-color: red;
+}

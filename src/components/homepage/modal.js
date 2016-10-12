@@ -14,7 +14,7 @@ const customStyles = {
   }
 };
 
-const ModalElement = React.createClass({
+var ModalElement = React.createClass({
 
 
   afterOpenModal() {
@@ -37,6 +37,8 @@ const ModalElement = React.createClass({
   render() {
     let itemDisplay = []
     let cartDisplay = null
+
+
     if(this.props.modalState && !this.props.isCart){  
       for (let i = 0; i < 6; i++){
         let item = this.props.filteredList[i]
@@ -46,9 +48,9 @@ const ModalElement = React.createClass({
         itemDisplay.push(<DisplayProduct category={item.category} src={item.image[0]} itemName={item.name} key={i} closeModal={this.props.closeModal}/>)
       }
     } else if(this.props.modalState && this.props.isCart){
+      let that = this;
       cartDisplay = this.props.cart.map(function(item,i){
-        console.log(item)
-        return <DisplayProduct category={item.category} src={item.image[0]} itemName={item.name} price={item.price} key={i} closeModal={this.props.closeModal}/>
+        return <DisplayProduct category={item.category} src={item.image[0]} itemName={item.name} price={item.price}key={i} closeModal={that.props.closeModal}/>
       })
     console.log(cartDisplay)
     }

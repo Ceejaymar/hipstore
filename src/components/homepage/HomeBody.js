@@ -12,7 +12,7 @@ var HomeBody = React.createClass({
           <h1>Featured Item</h1>
         </div>
         <div className="col-xs-3 thirdCont rounded">
-          <Link to="/category/other/Beard%20Grooming%20kit'">
+          <Link to="/category/other/Beard%20Grooming%20kit">
             <div className="newItems rounded">
               <h1>Newest Item</h1>
             </div>
@@ -28,3 +28,24 @@ var HomeBody = React.createClass({
 })
 
 export default HomeBody
+
+
+      //       <div className="homeFlex">
+      //   <div className="firstCont rounded">
+      //     <h1 className="welcome">Welcome to hipstore</h1>
+      //   </div>
+      //   <div className="secondCont rounded">
+      //     <h1>Featured Item</h1>
+      //   </div>
+      //   <div className="thirdCont rounded">
+      //     <Link to="/category/other/Beard%20Grooming%20kit'">
+      //       <div className="newItems rounded">
+      //         <h1>Newest Item</h1>
+      //       </div>
+      //     </Link>
+      //     <div className="rounded callToAction">
+      //       <p>Sign up. We'll send you some guac.</p>
+      //       <Link to="/signup"><button type="button" className="">Join Now!</button></Link>
+      //     </div>
+      //   </div>
+      // </div>
