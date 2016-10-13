@@ -1,0 +1,43 @@
+@import url("navBar.css");
+@import url("homebody.css");
+@import url("bottomFeature.css");
+@import url("modal.css");
+@import url("category.css");
+@import url("product.css");
+@import url("signup.css");
+@import url("404Page.css");
+@import url("footer.css");
+
+
+@font-face {
+    font-family: maxLight;
+    src: url(../fonts/MAXWELL_LIGHT.ttf);
+}
+@font-face {
+    font-family: maxReg;
+    src: url(../fonts/MAXWELL_REGULAR.ttf);
+}
+@font-face {
+    font-family: maxBold;
+    src: url(../fonts/MAXWELL_BOLD.ttf);
+}
+@font-face {
+    font-family: signPainter;
+    src: url(../fonts/SignPainter.otf);
+}
+
+body, html {
+  font-family: 'Lato', sans-serif;
+  /*background-color: #F0D8A8;*/
+}
+
+body{
+  overflow-x: hidden;
+}
+
+
+
+
+
+
+

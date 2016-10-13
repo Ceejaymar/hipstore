@@ -19,7 +19,7 @@ const Nav = React.createClass({
       this.props.onChange(event.target.value)
       setTimeout(() =>{
         ReactDOM.findDOMNode(this.refs["searchInput"]).focus()
-      },100)
+      },500)
     }
 
   },
@@ -27,6 +27,12 @@ const Nav = React.createClass({
     if(event.key === "Backspace"){
       this.props.onReset()
     }
+  },
+  focusOnInput(){
+    this.props.searchInputFunc()
+    setTimeout(() =>{
+      ReactDOM.findDOMNode(this.refs["searchInput"]).focus()
+    },100)
   },
   render: function() {
     let links = Object.keys(this.props.data).map(function(category, i){
@@ -38,43 +44,37 @@ const Nav = React.createClass({
       )
     })
     return (
-      <header style={{"zIndex": 10000, position: "fixed"}}>
-          <div className="navFlag">
-          <section className="navCont">
+        <Sticky stickyClassName="customSticky"> 
+          <nav className="navCont">
             <ul className="linkContainer">
-              <Link to="/signup"><li className="link nameLink">{this.props.username}</li></Link>
+              <Link to="/home/signup"><li className="link nameLink">{this.props.username}</li></Link>
               {links}
               <li className="link">
-              <button className="suitcase" onClick={this.props.openModal}><i className="fa fa-suitcase" aria-hidden="true"></i></button>
+              <Link to="/checkout/cart"><button className="suitcase"><i className="fa fa-suitcase" aria-hidden="true"></i></button></Link>
               </li>
             </ul>
-            <ReactCSSTransitionGroup transitionName="searchGrow">
             <div className="searchBar">
-              <input 
-                key="search"
-                type="text" 
-                className="searchInput"
-                ref="searchInput" 
-                placeholder="Search"
-                onChange={this.handleChange}
-                onKeyDown={this.handleReset} />
+              {
+                this.props.searchInput ?
+                  <ReactCSSTransitionGroup transitionName="search" transitionAppear={true} transitionAppearTimeout={500}
+                    transitionEnter={false} transitionLeave={false}>
+                    <input 
+                      key="search"
+                      type="text" 
+                      className="searchInput"
+                      ref="searchInput" 
+                      placeholder="Search"
+                      onChange={this.handleChange}
+                      onKeyDown={this.handleReset} />
+                  </ReactCSSTransitionGroup> :
+                  <button className="searchButton" onClick={this.focusOnInput}>search <i className="fa fa-search" aria-hidden="true"></i></button>
+              }
             </div>
-            </ReactCSSTransitionGroup>
-          </section>
-          <article className="hipstoreFlag">
-            <div className="flag"><img src="http://st.depositphotos.com/1280399/2546/i/950/depositphotos_25461693-Dirty-white-leather-texture.jpg" /></div>
-            <Link to="/">
-              <div className="mainLogoSticky"></div>
-            </Link>
-          </article>
-          </div>
-  
-      </header>
+          </nav>
+        </Sticky>
     )
   }
 })
 
 export default Nav
 
-        //<Sticky stickyStyle={{"zIndex": 10000}}>      </Sticky>
-                //<div className="topNav"><img src="https://d3ui957tjb5bqd.cloudfront.net/images/screenshots/products/12/127/127605/front-page-f.jpg?1402612630"/></div>

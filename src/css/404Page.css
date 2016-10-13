@@ -1,0 +1,28 @@
+
+.errorPage {
+  height: 100vh;
+  background-image: url("https://hd.unsplash.com/photo-1445206839590-883f6a81c3c6");
+  background-size: cover;
+  padding-top: 100px;
+  color: white;
+  /*display: flex;*/
+  /*flex-direction: column;*/
+  /*justify-content: center;*/
+}
+.errorPage h1 {
+  font-size: 125px;
+  font-weight: 600;
+}
+.errorPage h2 {
+  font-weight: 300;
+}
+
+.errorPageContent {
+  margin-left: 100px;
+}
+.errorPageContent h2 a {
+  text-decoration: none;
+}
+.errorPageContent h2 a:hover {
+  background-color: transparent;
+}

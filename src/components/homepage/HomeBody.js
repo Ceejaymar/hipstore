@@ -19,7 +19,7 @@ var HomeBody = React.createClass({
           </Link>
           <div className="rounded callToAction">
             <p>Sign up. We'll send you some guac.</p>
-            <Link to="/signup"><button type="button" className="btn btn-default btn">Join Now!</button></Link>
+            <Link to="/home/signup"><button type="button" className="btn btn-default btn">Join Now!</button></Link>
           </div>
         </div>
       </div>

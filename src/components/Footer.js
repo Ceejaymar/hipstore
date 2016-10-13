@@ -28,7 +28,7 @@ const Footer = React.createClass({
             <div className="input-group">
               <input type="email" className="form-control" placeholder="Email" />
               <span className="input-group-btn">
-                <Link to="/signup"><button className="btn btn-default" type="button">Sign up</button></Link>
+                <Link to="/home/signup"><button className="btn btn-default" type="button">Sign up</button></Link>
               </span>
               </div>
             </div>

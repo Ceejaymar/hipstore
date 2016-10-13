@@ -1,0 +1,156 @@
+.topNav{
+  height: 0;
+}
+
+.homeTitle {
+  height: 100vh;
+  padding: 5%;
+  background-image: url("https://s25.postimg.org/c24v6st3z/hipstore_background.jpg");
+  background-size: cover; 
+}
+
+.titleCont{
+  position: absolute;
+  top: 10vw;
+  right: 8vw;
+  width: 56vw;
+  height: 28vw;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.titleBox {
+  background: rgba(144,144,96,.4);
+/*  border: 3px white solid;*/
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 3vw;
+  
+}
+
+.titleBox h1 {
+  color: white;
+  font-size: 5em;
+  line-height: 1em;
+  font-family: maxReg;
+  margin: 0;
+}
+
+.navCircle {
+  width: 80px;
+  height: 80px;
+  background: rgba(120,96,72,.7);
+  border-radius: 40px;
+  margin-top: 3vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.navCircle .fa-chevron-down{
+  color: white;
+  opacity: .7;
+  font-size: 50px;
+}
+
+/*--------------------- Main Nav -----------------*/
+.customSticky{
+  z-index: 10000;
+}
+
+.navCont {
+  display: flex;
+  border: 1px red blue;
+  justify-content: flex-end;
+  padding: 0 5%;
+  background: rgba(255,255,255, .8);
+  height: 80px;
+  width: 100vw;
+  margin: 0;
+}
+
+.stickyLogo{
+  z-index: 300000000;
+  width: 16vw;
+  height: auto;
+}
+
+/*.mainLogoSticky{
+  width: 16vw;
+  height: auto;
+}*/
+.mainLogoSticky img {
+  width:100%;
+  height: auto;
+}
+
+.linkContainer{
+  display: flex;
+  justify-content: flex-end;
+  width:35vw;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+
+.link {
+  padding: 0 3%;
+  width: 30%;
+  text-decoration: none;
+  font-family: maxReg;
+  font-size: 2.2em;
+  line-height: 2em;
+  margin: 0;
+}
+
+/*.nameLink{
+  width: 250px;
+  line-height: 1em;
+}*/
+
+.suitcase{
+  border: none;
+  background: transparent;
+  color: #484830;
+}
+
+
+.searchBar {
+  width: 20vw;
+}
+
+.searchButton{
+  border: none;
+  position: relative;
+  right: 0;
+  width: 90%;
+  padding: 0;
+  font-family: maxReg;
+  font-size: 2.2em;
+  line-height: 2em;
+  margin: 0;
+  background: transparent;
+}
+
+.searchInput{
+  font-size: 1.7em;
+  transform: translate(0,50%);
+  position: relative;
+  right: 0;
+}
+
+.search-appear {
+   width: 15%;
+}
+
+.search-appear.search-appear-active {
+  width: 100%;
+  transition: all 1000ms cubic-bezier(0.680, -0.550, 0.265, 1.550);
+}
+
+
+
+/*--------- /Navbar ----------*/

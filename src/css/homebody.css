@@ -1,0 +1,125 @@
+a {
+  /*color: #00A388;*/
+  color: #484830;
+}
+
+a:hover {
+  /*color: #005244;*/
+  color: #909060;
+  background-color: white;
+}
+
+button.btn.btn-default {
+  /*font-size: 1em;*/
+  color: #909060;
+  background-color: white;
+  transition: 500ms;
+}
+
+button.btn.btn-default:hover {
+  color: white;
+  border: 1px solid #909060;
+  background-color: #909060;
+}
+
+.content {
+  margin-top: 80px;
+  color: white;
+  display: flex;
+  justify-content: space-around;
+  align-items: ;
+}
+
+.welcome {
+  font-family: 'Lato', sans-serif;
+  font-weight: 300;
+  font-size: 3.5em;
+}
+
+.firstCont {
+  height: 800px;
+  background-image: url('https://hd.unsplash.com/photo-1429728001698-8ba1c4c64783');
+  background-size: 1300px;
+  font-size: 1.5em;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-content: center;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.firstCont h1 {
+  text-shadow: 1px 1px 1px #36454f;
+  width: 300px;
+  font-weight: 300;
+}
+
+.secondCont {
+  background-image: url('http://ecx.images-amazon.com/images/I/61LwvDGZigL._SL1000_.jpg');
+  background-size: 800px;
+  color: lightgrey;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+  
+.secondCont h1 {
+  text-shadow: 1px 1px 1px #efefef;
+}
+
+.thirdCont {
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+
+}
+
+div.newItems {
+  height: 375px;
+  background-image: url('http://www.cad-eauonline.com/wp-content/uploads/2015/04/MG_1161.jpg');
+  background-size: cover;
+  /*color: #59D8E5;*/
+  display: flex;
+  justify-content: flex-end;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.thirdCont a{
+  color: white;
+}
+
+.thirdCont a:hover{
+  color: #909060;
+  text-decoration: none;
+}
+
+.newItems h1 {
+  text-shadow: 1px 1px 1px #36454f;
+  margin: 55px 20px 0 0;
+}
+
+.newItems h1:hover {
+  text-decoration: none;
+}
+
+.callToAction{
+  background-image: url('https://images.unsplash.com/photo-1473949103155-d89f3aa93cf1?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&cs=tinysrgb&s=b8d60f3a1c7c40f9981d2bb00e476559');
+  background-size: cover;  
+  height: 375px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5em;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.callToAction .btn{
+  font-size: 1.2em;
+}
+
+.callToAction p {
+  text-shadow: 1px 1px 1px #36454f;
+}
+.rounded {
+  border-radius: 2px;
+}

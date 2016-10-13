@@ -1,0 +1,44 @@
+.content {
+  top: 10%;
+  left: 5%;
+  width: 90%;
+  right: auto;
+  bottom: auto;
+  margin: auto;
+  background: rgba(240,216,168,.3);
+}
+
+.modalDirection {
+  display: flex;
+  flex-direction: row;
+  width: 100%; 
+}
+.modal1 {
+  display: flex;
+  flex-direction: column;
+  height: 450px;
+  width: 300px;
+  justify-content: center;
+}
+
+.mainModal {
+  /*margin-top:20px;*/
+  height: 200px;
+}
+.modalImage {
+  height: 300px;
+  width: 275px;
+  background-size: cover;
+}
+
+.fa-times {
+  font-size: 2em;
+  font-weight: 400;
+  color: #909060;
+  border: 1px solid #909060;
+  background-color: white;
+}
+.fa-times:hover {
+  color: white;
+  background-color: #909060;
+}

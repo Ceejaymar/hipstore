@@ -1,0 +1,90 @@
+/*----------------Bottom Feature-----------------*/
+.bottomFeatureCont{
+  position: relative;
+}
+
+.shape {
+  width: 90%;
+  height: 325px;
+  transform: skew(10deg);
+  background: #909060;
+  position: absolute;
+  opacity: .4;
+  margin: 0 auto; 
+  margin-top: 4%;
+  margin-left: 5%;
+
+}
+
+.bottomFeature{
+  margin-top: 5%;
+}
+
+.bottomFeature .modal1 {
+  height: 405px;
+  width: 400px;
+  margin: 1%;
+  transform: skew(10deg);
+  overflow: hidden;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.bottomFeature .modalImage {
+  width: 200%;
+  height: 505px;
+  background-size: cover;
+  transform: skew(-10deg) translate(-150px, 0);
+}
+
+.bottomFeature .modal1:hover {
+  transform: scale(1.05) skew(10deg);
+}
+
+
+.scrollButtons{
+  padding: 0;
+}
+
+.homeShape{
+  background: #909060;
+  position: absolute;
+  opacity: .4;
+  margin-top: -150px;
+  width: 6500px;
+  height: 1000px;
+  transform: rotate(8deg) translate(-10%);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+   overflow: hidden;
+   z-index: -10000;
+}
+
+.bottomFeature {
+  margin-top: 30px;
+  display: flex;
+  /*justify-content: center;*/
+  /*align-item: center;*/
+  align-content: center;
+}
+
+.scrollButtons {
+  font-size: 3.5em;
+  background-color: transparent;
+   color: #786048; 
+   border: none;
+}
+
+button:focus {
+  outline:0;
+}
+
+.scrollButtons:hover {
+  border: none;
+  opacity: .7;
+}
+
+.itemDirection{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+

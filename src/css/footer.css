@@ -1,0 +1,44 @@
+
+
+.aboutHS {
+  margin-left: 20px;
+}
+
+.footerLi {
+  display: inline;
+  margin-left: 20px;
+}
+
+a.bottomLinks {
+  text-decoration: none;
+}
+a.presented {
+  text-decoration: none;
+}
+
+.presented {
+  font-weight: 500;
+  font-size: 1.2em;
+}
+
+.footerLogo {
+  width: 300px;
+  height: 130px;
+  background-image: url('../images/hipstore.png');
+  background-size: cover;
+}
+
+.footerCont {
+  display: flex;
+  justify-content: space-around; 
+}
+
+
+.input-group {
+  margin-bottom: -180px;
+}
+
+.wrapper {
+  margin-top: 100px;
+  background-color: red;
+}

@@ -6,20 +6,16 @@ var ProductPage = React.createClass({
     //find the image to display base off the params
     let category = this.props.params.category;
     let product = this.props.params.product;
-    console.log(category, product)
     let item = this.props.data[category].filter(function(item){
-      console.log(item.name)
-      console.log(product)
         if(item.name === product){
-          console.log("remter")
           return item;
         }
       })
     return item
   },
-  addItemToCart(){
+  addItemToCart(event){
     let item = this.findItem()
-    this.props.addToCart(item)
+    this.props.addToCart(item, event)
   },
   render: function(){
 
@@ -31,8 +27,6 @@ var ProductPage = React.createClass({
       )
     })
     let item = this.findItem()
-    console.log(item)
-    console.log(item[0].image[0])
    	return (
       <div className="contentContainer">
 

@@ -55,11 +55,12 @@ var ModalElement = React.createClass({
     console.log(cartDisplay)
     }
     return (
-      <div>
+      <div className="content">
         <Modal
           isOpen={this.props.modalState}
           onAfterOpen={this.afterOpenModal}
-          style={customStyles}>
+          className={this.props.isCart ? "cart" : "content"}
+          >
 
           <button className="fa fa-times pull-right" onClick={this.props.closeModal}></button>
           <h2 ref="subtitle">{this.props.isCart ? "Items In Cart:" : "Search Results:"}</h2>
